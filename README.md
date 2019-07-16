@@ -8,6 +8,8 @@ The goal of this project is to revisit and remake the Planets project that you'v
 
 Please fork and clone this repository, then create an Xcode project in it. Commit regularly as you complete the requirements in this project.
 
+Add the planets from the Planets folder to your Asset Catalog.
+
 ### Part 1 - Storyboard
 
 **When adding new files, remember to give them a prefix!**
