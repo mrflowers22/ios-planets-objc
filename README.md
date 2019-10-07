@@ -28,7 +28,7 @@ Add the planets from the Planets folder to your Asset Catalog.
 ### Part 2 - Model/Model Controller
 
 1. Create a model object that represents a planet. It should include the name and image of the planet.
-2. Create a model controller that has private hardcoded array of planets;
+2. Create a model controller that has private hardcoded array of planets
 3. Create a computed property (aka a property in Objective-C) for the planets that adds Pluto if the `NSUserDefault` property is set.
 
 ### Part 3 - View Controller
