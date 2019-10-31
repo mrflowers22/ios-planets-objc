@@ -22,7 +22,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="planetCell" id="PcK-Ob-4zD">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="planetCell" id="PcK-Ob-4zD" customClass="MRFPlanetCellCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="161" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XuN-Gf-J6n">
@@ -64,6 +64,10 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="161" height="161"/>
+                                <connections>
+                                    <outlet property="nameLabel" destination="6bi-XY-cSc" id="1h2-yb-0vJ"/>
+                                    <outlet property="planetImageView" destination="nOq-65-Mn8" id="Jcz-8O-2d9"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
