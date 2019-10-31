@@ -17,6 +17,7 @@
 		1B9BE281236B463E0000022C /* MRFPlanetCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BE280236B463E0000022C /* MRFPlanetCellCollectionViewCell.m */; };
 		1B9BE285236B48970000022C /* MRFSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BE284236B48970000022C /* MRFSettingsViewController.m */; };
 		1B9BE289236B4B940000022C /* MRFPlanet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BE288236B4B940000022C /* MRFPlanet.m */; };
+		1B9BE28C236B4D810000022C /* MRFPlanetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BE28B236B4D810000022C /* MRFPlanetController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		1B9BE284236B48970000022C /* MRFSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MRFSettingsViewController.m; path = PlanetsOBJC/Views/MRFSettingsViewController.m; sourceTree = SOURCE_ROOT; };
 		1B9BE287236B4B940000022C /* MRFPlanet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRFPlanet.h; sourceTree = "<group>"; };
 		1B9BE288236B4B940000022C /* MRFPlanet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRFPlanet.m; sourceTree = "<group>"; };
+		1B9BE28A236B4D810000022C /* MRFPlanetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRFPlanetController.h; sourceTree = "<group>"; };
+		1B9BE28B236B4D810000022C /* MRFPlanetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRFPlanetController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 		1B9BE27A236B44B00000022C /* Model  Contrroller */ = {
 			isa = PBXGroup;
 			children = (
+				1B9BE28A236B4D810000022C /* MRFPlanetController.h */,
+				1B9BE28B236B4D810000022C /* MRFPlanetController.m */,
 			);
 			path = "Model  Contrroller";
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				1B9BE285236B48970000022C /* MRFSettingsViewController.m in Sources */,
 				1B9BE281236B463E0000022C /* MRFPlanetCellCollectionViewCell.m in Sources */,
 				1B9BE260236B43B90000022C /* AppDelegate.m in Sources */,
+				1B9BE28C236B4D810000022C /* MRFPlanetController.m in Sources */,
 				1B9BE271236B43BA0000022C /* main.m in Sources */,
 				1B9BE263236B43B90000022C /* SceneDelegate.m in Sources */,
 			);
