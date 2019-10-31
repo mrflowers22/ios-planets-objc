@@ -7,7 +7,7 @@
 //
 
 #import "MRFSettingsViewController.h"
-
+#import "MRFPlanetController.h"
 @interface MRFSettingsViewController ()
 
 @end
@@ -21,6 +21,7 @@
 
 - (IBAction)doneButtonTapped:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+//    [[self navigationController] popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)switchValueChanged:(UISwitch *)sender {
@@ -28,7 +29,7 @@
     //if this is on then we should save to userDefaults
     //create an instance of userdefaults and set its boolean property to match the switch
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setBool:sender.on forKey:@"ShouldShowPluto"];
+    [userDefaults setBool:_switchValue.on forKey:@"ShouldShowPluto"];
     
 }
 
@@ -36,9 +37,6 @@
 - (void)updateViews
 {
     [self.switchValue setOn: [[NSUserDefaults standardUserDefaults] boolForKey:@"ShouldShowPluto"]];
-    
 }
-
-
 
 @end

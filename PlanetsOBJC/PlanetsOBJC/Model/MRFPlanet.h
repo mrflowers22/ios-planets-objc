@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MRFPlanet : NSObject
 
 //create the properties in the .h files
-@property (readonly)NSString *name;
-@property (readonly) NSString *imageName;
+@property NSString *name;
+@property NSString *imageName;
 
 //here we declare the init functionality
 // - = instance method. +  = static or type method
