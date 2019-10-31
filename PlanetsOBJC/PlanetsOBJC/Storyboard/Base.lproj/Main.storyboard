@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,11 +76,70 @@
                             <outlet property="delegate" destination="C9P-GQ-z0c" id="rmZ-as-hd0"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="qG9-oJ-153"/>
+                    <navigationItem key="navigationItem" id="qG9-oJ-153">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Dhq-xt-tq0">
+                            <connections>
+                                <segue destination="IJy-FW-4Me" kind="presentation" identifier="settingsSegue" id="fX7-gh-1hL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDk-1V-mn4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1584.057971014493" y="146.65178571428569"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="fIz-cu-5YF">
+            <objects>
+                <viewController id="IJy-FW-4Me" customClass="MRFSettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6wC-CG-DVP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxe-s0-zZG">
+                                <rect key="frame" x="353" y="57" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="rWH-2t-gnq" eventType="touchUpInside" id="5dp-mq-hSd"/>
+                                    <action selector="doneButtonTapped:" destination="IJy-FW-4Me" eventType="touchUpInside" id="fg9-53-ctf"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r56-g7-e4r">
+                                <rect key="frame" x="184" y="452" width="49" height="31"/>
+                                <connections>
+                                    <action selector="switchValueChanged:" destination="rWH-2t-gnq" eventType="valueChanged" id="T5I-7P-dNW"/>
+                                    <action selector="switchValueChanged:" destination="IJy-FW-4Me" eventType="valueChanged" id="VgA-A3-o3q"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Is Pluto a Planet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAS-lD-uR5">
+                                <rect key="frame" x="142" y="411" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qxe-s0-zZG" firstAttribute="leading" secondItem="aYu-hF-Lh9" secondAttribute="leading" constant="353" id="7Pp-AW-q5p"/>
+                            <constraint firstItem="IAS-lD-uR5" firstAttribute="centerX" secondItem="6wC-CG-DVP" secondAttribute="centerX" id="8Ay-CG-Tgg"/>
+                            <constraint firstItem="qxe-s0-zZG" firstAttribute="top" secondItem="aYu-hF-Lh9" secondAttribute="top" constant="57" id="YMC-l9-wxF"/>
+                            <constraint firstItem="IAS-lD-uR5" firstAttribute="leading" secondItem="aYu-hF-Lh9" secondAttribute="leading" constant="142" id="mfr-Hb-70D"/>
+                            <constraint firstItem="IAS-lD-uR5" firstAttribute="centerY" secondItem="6wC-CG-DVP" secondAttribute="centerY" id="rJQ-jB-n7z"/>
+                            <constraint firstItem="r56-g7-e4r" firstAttribute="top" secondItem="IAS-lD-uR5" secondAttribute="bottom" constant="20" id="suM-mv-EBb"/>
+                            <constraint firstItem="aYu-hF-Lh9" firstAttribute="bottom" secondItem="r56-g7-e4r" secondAttribute="bottom" constant="325" id="tFu-RR-sKa"/>
+                            <constraint firstItem="r56-g7-e4r" firstAttribute="leading" secondItem="aYu-hF-Lh9" secondAttribute="leading" constant="184" id="xbH-te-uwv"/>
+                            <constraint firstItem="IAS-lD-uR5" firstAttribute="top" secondItem="aYu-hF-Lh9" secondAttribute="top" constant="411" id="zT1-vg-zWD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aYu-hF-Lh9"/>
+                    </view>
+                    <connections>
+                        <outlet property="switchValue" destination="r56-g7-e4r" id="dSb-3F-KKw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YTx-o5-Eff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="rWH-2t-gnq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2286" y="143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dmB-x3-1sA">

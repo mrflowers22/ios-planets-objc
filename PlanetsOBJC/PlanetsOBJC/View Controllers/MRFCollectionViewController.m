@@ -90,4 +90,12 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 */
 
+- (IBAction)doneButtonTapped:(UIButton *)sender {
+}
+
+- (IBAction)switchValueChanged:(UISwitch *)sender {
+}
+
+- (IBAction)switchValue {
+}
 @end
